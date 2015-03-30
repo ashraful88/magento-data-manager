@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<config>
+    <api2>
+        <resource_groups>
+            <contract translate="title" module="contractpricing">
+                <title>Contract Resource</title>
+                <sort_order>120</sort_order>
+                <children>
+                    <contract_contract translate="title" module="contractpricing">
+                        <title>Contract</title>
+                        <sort_order>0</sort_order>
+                    </contract_contract>
+
+                </children>
+            </contract>
+        </resource_groups>
+        <resources>
+            <contract_contract translate="title" module="contractpricing">
+                <group>contract_contract</group>
+                <model>contractpricing/api2_contract</model>
+                <working_model>contractpricing/contract</working_model>
+                <title>Contract</title>
+                <sort_order>0</sort_order>
+                <privileges>
+                    <admin>
+                        <create>1</create>
+                        <retrieve>1</retrieve>
+                        <update>1</update>
+                        <delete>1</delete>
+                    </admin>
+                    <customer>
+                        <retrieve>1</retrieve>
+                    </customer>
+                    <guest>
+                        <retrieve>1</retrieve>
+                    </guest>
+                </privileges>
+                <attributes translate="entity_id customer_id contract_number contract_price product_id is_active" module="contractpricing">
+                    <entity_id>Id</entity_id>
+                    <contract_number>contract_number</contract_number>
+                    <customer_id>customer_id</customer_id>
+                    <product_id>product_id</product_id>
+                    <contract_price>contract_price</contract_price>
+                    <tier_qty>tier_qty</tier_qty>
+                    <tier_price>tier_price</tier_price>
+                    <expiration>expiration</expiration>
+                    <is_active>Enabled</is_active>
+                </attributes>
+                <routes>
+                    <route_entity>
+                        <route>/contract_pricing/:id</route>
+                        <action_type>entity</action_type>
+                    </route_entity>
+                    <route_entity_with_store>
+                        <route>/contract_pricings/:id/store/:store</route>
+                        <action_type>entity</action_type>
+                    </route_entity_with_store>
+                    <route_collection>
+                        <route>/contract_pricings</route>
+                        <action_type>collection</action_type>
+                    </route_collection>
+                    <route_collection_with_store>
+                        <route>/contract_pricings/store/:store</route>
+                        <action_type>collection</action_type>
+                    </route_collection_with_store>
+                </routes>
+                <versions>1</versions>
+            </contract_contract>
+
+        </resources>
+    </api2>
+</config>

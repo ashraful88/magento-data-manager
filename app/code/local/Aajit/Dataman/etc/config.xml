@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento Enterprise Edition
+ *
+ * @category    Levementum
+ * @package     Levementum_ContractPriceing
+ */
+-->
+<config>
+    <modules>
+        <Levementum_ContractPricing>
+            <version>1.0.0</version>
+        </Levementum_ContractPricing>
+    </modules>
+
+  <!--  <adminhtml>
+        <translate>
+            <modules>
+                <Levementum_ContractPricing>
+                    <files>
+                        <default>Levementum_ContractPricing.csv</default>
+                    </files>
+                </Levementum_ContractPricing>
+            </modules>
+        </translate>
+    </adminhtml>-->
+
+    <global>
+        <helpers>
+            <contractpricing>
+                <class>Levementum_ContractPricing_Helper</class>
+            </contractpricing>
+        </helpers>
+        <models>
+            <contractpricing>
+                <class>Levementum_ContractPricing_Model</class>
+                <resourceModel>contractpricing_resource</resourceModel>
+            </contractpricing>
+            <contractpricing_resource>
+                <class>Levementum_ContractPricing_Model_Resource</class>
+                <entities>
+                    <contract>
+                        <table>levementum_contractpricing</table>
+                    </contract>
+                </entities>
+            </contractpricing_resource>
+        </models>
+        <resources>
+            <contract_pricing_setup>
+                <setup>
+                    <module>Levementum_ContractPricing</module>
+                </setup>
+            </contract_pricing_setup>
+        </resources>
+        <blocks>
+            <contractpricing>
+                <class>Levementum_ContractPricing_Block</class>
+            </contractpricing>
+        </blocks>
+    </global>
+
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Levementum_ContractPricing before="Mage_Adminhtml">Levementum_ContractPricing</Levementum_ContractPricing>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+
+</config>

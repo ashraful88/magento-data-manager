@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!--
+/**
+ *
+ * @category    Levementum
+ * @package     Levementum_ContractPricing
+ */
+-->
+<config>
+    <menu>
+         <levementum translate="title" module="contractpricing">
+            <title>Levementum</title>
+            <sort_order>700</sort_order>
+            <children>
+                <contract module="contractpricing">
+                    <title>Contract Pricing</title>
+                    <action>adminhtml/contract/index</action>
+                    <sort_order>0</sort_order>
+                </contract>
+            </children>
+         </levementum>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <levementum translate="title" module="contractpricing">
+                        <title>Levementum</title>
+                        <sort_order>700</sort_order>
+                        <children>
+                            <contract>
+                                <title>Contract Pricing</title>
+                            </contract>
+                        </children>
+                    </levementum>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

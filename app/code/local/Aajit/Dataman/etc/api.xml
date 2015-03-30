@@ -1,0 +1,74 @@
+<config>
+    <api>
+        <resources>
+            <contract translate="title" module="contractpricing">
+                <title>Contract Resource</title>
+                <model>contractpricing/api</model>
+                <acl>contract</acl>
+                <methods>
+                    <list translate="title" module="contractpricing">
+                        <title>Retrive contracts</title>
+                        <method>items</method>
+                        <acl>contract/list</acl>
+                    </list>
+                    <create translate="title" module="contractpricing">
+                        <title>Create contract</title>
+                        <acl>contract/create</acl>
+                    </create>
+                    <info translate="title" module="contractpricing">
+                        <title>Retrieve contract data</title>
+                    </info>
+                    <update translate="title" module="contractpricing">
+                        <title>Update contract data</title>
+                        <acl>contract/update</acl>
+                    </update>
+                    <delete>
+                        <title>Delete contract</title>
+                        <acl>contract/delete</acl>
+                    </delete>
+                </methods>
+                <faults module="contractpricing">
+                    <data_invalid>
+                        <code>100</code>
+                        <message>Invalid customer data. Details in error message.</message>
+                    </data_invalid>
+                    <filters_invalid>
+                        <code>101</code>
+                        <message>Invalid filters specified. Details in error message.</message>
+                    </filters_invalid>
+                    <not_exists>
+                        <code>102</code>
+                        <message>Customer doesn't exist.</message>
+                    </not_exists>
+                    <not_deleted>
+                        <code>103</code>
+                        <message>Customer was not deleted. Details in error message.</message>
+                    </not_deleted>
+                </faults>
+            </contract>
+        </resources>
+
+        <acl>
+            <resources>
+                <contract translate="title" module="contractpricing">
+                    <title>Contract</title>
+                    <list translate="title" module="contractpricing">
+                        <title>View All</title>
+                    </list>
+                    <create translate="title" module="contractpricing">
+                        <title>Create</title>
+                    </create>
+                    <info translate="title" module="contractpricing">
+                        <title>Get Info</title>
+                    </info>
+                    <update translate="title" module="contractpricing">
+                        <title>Update</title>
+                    </update>
+                    <delete translate="title" module="contractpricing">
+                        <title>Delete</title>
+                    </delete>
+                </contract>
+            </resources>
+        </acl>
+    </api>
+</config>
