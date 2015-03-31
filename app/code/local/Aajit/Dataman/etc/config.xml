@@ -1,62 +1,54 @@
 <?xml version="1.0"?>
-<!--
-/**
- * Magento Enterprise Edition
- *
- * @category    Levementum
- * @package     Levementum_ContractPriceing
- */
--->
 <config>
     <modules>
-        <Levementum_ContractPricing>
+        <Aajit_Dataman>
             <version>1.0.0</version>
-        </Levementum_ContractPricing>
+        </Aajit_Dataman>
     </modules>
 
   <!--  <adminhtml>
         <translate>
             <modules>
-                <Levementum_ContractPricing>
+                <Aajit_Dataman>
                     <files>
-                        <default>Levementum_ContractPricing.csv</default>
+                        <default>Aajit_Dataman.csv</default>
                     </files>
-                </Levementum_ContractPricing>
+                </Aajit_Dataman>
             </modules>
-        </translate>
+        </translate> Aajit_Dataman
     </adminhtml>-->
 
     <global>
         <helpers>
-            <contractpricing>
-                <class>Levementum_ContractPricing_Helper</class>
-            </contractpricing>
+            <dataman>
+                <class>Aajit_Dataman_Helper</class>
+            </dataman>
         </helpers>
         <models>
-            <contractpricing>
-                <class>Levementum_ContractPricing_Model</class>
-                <resourceModel>contractpricing_resource</resourceModel>
-            </contractpricing>
-            <contractpricing_resource>
-                <class>Levementum_ContractPricing_Model_Resource</class>
+            <dataman>
+                <class>Aajit_Dataman_Model</class>
+                <resourceModel>dataman_resource</resourceModel>
+            </dataman>
+            <dataman_resource>
+                <class>Aajit_Dataman_Model_Resource</class>
                 <entities>
                     <contract>
-                        <table>levementum_contractpricing</table>
+                        <table>aajit_dataman</table>
                     </contract>
                 </entities>
-            </contractpricing_resource>
+            </dataman_resource>
         </models>
         <resources>
-            <contract_pricing_setup>
+            <dataman_setup>
                 <setup>
-                    <module>Levementum_ContractPricing</module>
+                    <module>Aajit_Dataman</module>
                 </setup>
-            </contract_pricing_setup>
+            </dataman_setup>
         </resources>
         <blocks>
-            <contractpricing>
-                <class>Levementum_ContractPricing_Block</class>
-            </contractpricing>
+            <dataman>
+                <class>Aajit_Dataman_Block</class>
+            </dataman>
         </blocks>
     </global>
 
@@ -65,7 +57,7 @@
             <adminhtml>
                 <args>
                     <modules>
-                        <Levementum_ContractPricing before="Mage_Adminhtml">Levementum_ContractPricing</Levementum_ContractPricing>
+                        <Aajit_Dataman before="Mage_Adminhtml">Aajit_Dataman</Aajit_Dataman>
                     </modules>
                 </args>
             </adminhtml>

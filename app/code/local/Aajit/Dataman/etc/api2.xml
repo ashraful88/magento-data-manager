@@ -2,23 +2,22 @@
 <config>
     <api2>
         <resource_groups>
-            <contract translate="title" module="contractpricing">
-                <title>Contract Resource</title>
+            <dataman translate="title" module="dataman">
+                <title>Dataman Resource</title>
                 <sort_order>120</sort_order>
                 <children>
-                    <contract_contract translate="title" module="contractpricing">
-                        <title>Contract</title>
+                    <dataman_data translate="title" module="dataman">
+                        <title>Dataman Data</title>
                         <sort_order>0</sort_order>
-                    </contract_contract>
-
+                    </dataman_data>
                 </children>
-            </contract>
+            </dataman>
         </resource_groups>
         <resources>
-            <contract_contract translate="title" module="contractpricing">
-                <group>contract_contract</group>
-                <model>contractpricing/api2_contract</model>
-                <working_model>contractpricing/contract</working_model>
+            <dataman_data translate="title" module="dataman">
+                <group>dataman_data</group>
+                <model>dataman/api2_dataman</model>
+                <working_model>dataman/dataman</working_model>
                 <title>Contract</title>
                 <sort_order>0</sort_order>
                 <privileges>
@@ -35,7 +34,7 @@
                         <retrieve>1</retrieve>
                     </guest>
                 </privileges>
-                <attributes translate="entity_id customer_id contract_number contract_price product_id is_active" module="contractpricing">
+                <attributes translate="entity_id customer_id contract_number contract_price product_id is_active" module="dataman">
                     <entity_id>Id</entity_id>
                     <contract_number>contract_number</contract_number>
                     <customer_id>customer_id</customer_id>
@@ -65,7 +64,7 @@
                     </route_collection_with_store>
                 </routes>
                 <versions>1</versions>
-            </contract_contract>
+            </dataman_data>
 
         </resources>
     </api2>

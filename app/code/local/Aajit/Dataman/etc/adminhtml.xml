@@ -8,31 +8,31 @@
 -->
 <config>
     <menu>
-         <levementum translate="title" module="contractpricing">
-            <title>Levementum</title>
+         <aajit translate="title" module="dataman">
+            <title>AajIT</title>
             <sort_order>700</sort_order>
             <children>
-                <contract module="contractpricing">
+                <dataman module="dataman">
                     <title>Contract Pricing</title>
                     <action>adminhtml/contract/index</action>
                     <sort_order>0</sort_order>
-                </contract>
+                </dataman>
             </children>
-         </levementum>
+         </aajit>
     </menu>
     <acl>
         <resources>
             <admin>
                 <children>
-                    <levementum translate="title" module="contractpricing">
-                        <title>Levementum</title>
+                    <aajit translate="title" module="dataman">
+                        <title>AajIT</title>
                         <sort_order>700</sort_order>
                         <children>
                             <contract>
-                                <title>Contract Pricing</title>
+                                <title>Data Man</title>
                             </contract>
                         </children>
-                    </levementum>
+                    </aajit>
                 </children>
             </admin>
         </resources>

@@ -1,24 +1,24 @@
 <config>
     <api>
         <resources>
-            <contract translate="title" module="contractpricing">
+            <dataman translate="title" module="dataman">
                 <title>Contract Resource</title>
-                <model>contractpricing/api</model>
+                <model>dataman/api</model>
                 <acl>contract</acl>
                 <methods>
-                    <list translate="title" module="contractpricing">
+                    <list translate="title" module="dataman">
                         <title>Retrive contracts</title>
                         <method>items</method>
                         <acl>contract/list</acl>
                     </list>
-                    <create translate="title" module="contractpricing">
+                    <create translate="title" module="dataman">
                         <title>Create contract</title>
                         <acl>contract/create</acl>
                     </create>
-                    <info translate="title" module="contractpricing">
+                    <info translate="title" module="dataman">
                         <title>Retrieve contract data</title>
                     </info>
-                    <update translate="title" module="contractpricing">
+                    <update translate="title" module="dataman">
                         <title>Update contract data</title>
                         <acl>contract/update</acl>
                     </update>
@@ -27,7 +27,7 @@
                         <acl>contract/delete</acl>
                     </delete>
                 </methods>
-                <faults module="contractpricing">
+                <faults module="dataman">
                     <data_invalid>
                         <code>100</code>
                         <message>Invalid customer data. Details in error message.</message>
@@ -45,29 +45,29 @@
                         <message>Customer was not deleted. Details in error message.</message>
                     </not_deleted>
                 </faults>
-            </contract>
+            </dataman>
         </resources>
 
         <acl>
             <resources>
-                <contract translate="title" module="contractpricing">
+                <dataman translate="title" module="dataman">
                     <title>Contract</title>
-                    <list translate="title" module="contractpricing">
+                    <list translate="title" module="dataman">
                         <title>View All</title>
                     </list>
-                    <create translate="title" module="contractpricing">
+                    <create translate="title" module="dataman">
                         <title>Create</title>
                     </create>
-                    <info translate="title" module="contractpricing">
+                    <info translate="title" module="dataman">
                         <title>Get Info</title>
                     </info>
-                    <update translate="title" module="contractpricing">
+                    <update translate="title" module="dataman">
                         <title>Update</title>
                     </update>
-                    <delete translate="title" module="contractpricing">
+                    <delete translate="title" module="dataman">
                         <title>Delete</title>
                     </delete>
-                </contract>
+                </dataman>
             </resources>
         </acl>
     </api>
