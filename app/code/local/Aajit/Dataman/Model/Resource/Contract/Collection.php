@@ -1,6 +1,6 @@
 <?php
 
-class Levementum_ContractPricing_Model_Resource_Contract_Collection extends Mage_Core_Model_Resource_Db_Collection_Abstract
+class Aajit_Dataman_Model_Resource_Contract_Collection extends Mage_Core_Model_Resource_Db_Collection_Abstract
 {
     protected $_previewFlag;
 

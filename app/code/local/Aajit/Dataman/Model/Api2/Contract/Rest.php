@@ -1,6 +1,6 @@
 <?php
 
-abstract class Levementum_ContractPricing_Model_Api2_Contract_Rest extends Levementum_ContractPricing_Model_Api2_Contract
+abstract class Aajit_Dataman_Model_Api2_Contract_Rest extends Aajit_Dataman_Model_Api2_Contract
 {
     protected $_supplier;
 
